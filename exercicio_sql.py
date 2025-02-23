@@ -30,9 +30,24 @@ cursor = conexao.cursor()
 #	print(usuario)
 
 #c) Selecionar os alunos do curso de "Engenharia" em ordem alfabética.
-
+##dados = cursor.execute('SELECT * FROM alunos WHERE curso ="Engenharia" ORDER BY curso ASC')
+#for usuario in dados:
+#	print(usuario)
 
 #d) Contar o número total de alunos na tabela
+#dados = cursor.execute('SELECT COUNT(*) FROM alunos').fetchall()
+#quantidade = dados[0][0]  # Pega o primeiro resultado da consulta
+#print(f"Quantidade de registros na tabela alunos: {quantidade}")
+
+
+#4. Atualização e Remoção
+#a) Atualize a idade de um aluno específico na tabela.
+#b) Remova um aluno pelo seu ID
+
+
+
+
+
 
 conexao.commit()
 conexao.close()
