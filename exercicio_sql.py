@@ -63,6 +63,34 @@ cursor = conexao.cursor()
 #6. Consultas e Funções Agregadas
 #Escreva consultas SQL para realizar as seguintes tarefas:
 #a) Selecione o nome e a idade dos clientes com idade superior a 30 anos.
+#dados = cursor.execute('SELECT nome, idade FROM clientes WHERE idade > 30')
+#for usuario in dados:
+#	print(usuario)
+
+
+#b) Calcule o saldo médio dos clientes.
+#dados = cursor.execute('SELECT AVG(saldo) FROM clientes ')
+#media_saldo = dados.fetchone()[0]  # Obtém o valor médio retornado pela consulta
+#print(f"Valor médio do saldo: {media_saldo:.2f}")
+
+#c) Encontre o cliente com o saldo máximo.
+#dados = cursor.execute('SELECT nome, saldo FROM clientes WHERE saldo = (SELECT MAX(saldo) FROM clientes)')
+#max_saldo = dados.fetchone()  # Obtém o nome e o saldo máximo
+#print(f"Cliente com maior saldo: {max_saldo[0]}, Saldo: {max_saldo[1]:.2f}")
+
+
+#d) Conte quantos clientes têm saldo acima de 1000.
+#dados = cursor.execute('SELECT COUNT(*) FROM clientes WHERE saldo > 1000').fetchall()
+#quantidade = dados[0][0]  # Pega o primeiro resultado da consulta
+#print(f"Quantidade de clientes com saldo acima de 1000: {quantidade}")
+
+#7. Atualização e Remoção com Condições
+#a) Atualize o saldo de um cliente específico.
+#cursor.execute('UPDATE clientes SET saldo=2000 WHERE nome="Maria"')  
+
+#b) Remova um cliente pelo seu ID
+#cursor.execute('DELETE FROM clientes WHERE id=4')
+
 
 
 
